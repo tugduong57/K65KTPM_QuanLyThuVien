@@ -6,4 +6,4 @@ Chào mọi người:
   - List các thư viện:
     pip install Pillow
     pip install pyodbc
-    
+    pip install requests
