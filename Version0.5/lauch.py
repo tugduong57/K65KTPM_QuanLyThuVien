@@ -5,6 +5,7 @@ connectSQL.C_database()
 import sign_in
 import sign_up
 import Version0_5
+import add_book
 
 import os
 
@@ -27,9 +28,9 @@ root.resizable(False, False)
 root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(0, weight=1)
 
-sign_in.sign_in(root)
+#sign_in.sign_in(root)
 #sign_up.sign_up(root)
-#Version0_5.quanlykhosach(root)
+Version0_5.quanlykhosach(root)
 
 def show_Version0_5():
     Version0_5.quanlykhosach(root)

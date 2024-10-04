@@ -1,8 +1,6 @@
 import tkinter as tk
-from tkinter import Tk, Frame, Button, Label, ttk, Entry
+from tkinter import *
 from PIL import Image, ImageTk 
-from tkinter import ttk
-import math
 import os
 import add_book
 
@@ -273,11 +271,9 @@ def quanlykhosach(root):
     def on_leave(event):
         event.widget.config(cursor='')  # Khôi phục màu nền và kiểu con trỏ khi chuột ra khỏi label
 
-    buttonBanDoc = Button(Root, text = "Độc giả", bg = '#145da0', fg = "white", font =("Poppins", 20), borderwidth=0, highlightthickness=0)
-    buttonBanDoc.place(x=95, y=310, height = 30)
+    buttonBanDoc = Button(Root, text = "Độc giả", bg = '#145da0', fg = "white", font =("Poppins", 20), borderwidth=0, highlightthickness=0);  buttonBanDoc.place(x=95, y=310, height = 30)
 
-    buttonBaoCao = Button(Root, text = "Báo cáo", bg = '#145da0', fg = "white", font =("Poppins", 20), borderwidth=0, highlightthickness=0)
-    buttonBaoCao.place(x=95, y=427, height = 30)
+    buttonBaoCao = Button(Root, text = "Báo cáo", bg = '#145da0', fg = "white", font =("Poppins", 20), borderwidth=0, highlightthickness=0); buttonBaoCao.place(x=95, y=427, height = 30)
 
     ig_Them = Xuly_Anh(PathOfFile + "/Image/"+'buttonThem.png', 66, 66)
     buttonThem = Button(Root, image=ig_Them, command = lambda : Add_book(Root, root), borderwidth=0, highlightthickness=0); buttonThem.place(x=425, y=490)
