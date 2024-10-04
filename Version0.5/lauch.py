@@ -32,7 +32,4 @@ root.grid_columnconfigure(0, weight=1)
 #sign_up.sign_up(root)
 Version0_5.quanlykhosach(root)
 
-def show_Version0_5():
-    Version0_5.quanlykhosach(root)
-
 root.mainloop()

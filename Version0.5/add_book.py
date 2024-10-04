@@ -73,14 +73,8 @@ def add_book(root, Root):
     button_Save.place(x = 552, y = 485)
 
     ig_Button_QuayLai = Xuly_Anh(PathOfFile + "/Image/" +'button_Back.png', 57, 57)
-    button_Back = Button(root, image = ig_Button_QuayLai, borderwidth=0, highlightthickness=0); 
+    button_Back = Button(root, image = ig_Button_QuayLai, borderwidth=0, highlightthickness=0, command = lambda : khosach()); 
     button_Back.place(x = 443, y = 487)
-
-    button_add_book = Button(frame_add, text='Thêm sách', bg='green', fg='white', font=('Arial', 20))
-    button_add_book.grid(row=2, column=0, pady=10, padx=20)
-
-    button_back = Button(frame_add, text='Hủy', bg='red', fg='white', font=('Arial', 20), command = lambda : khosach() )
-    button_back.grid(row=2, column=1, pady=10, padx=20)
 
     root.update_idletasks()
     root.mainloop()
