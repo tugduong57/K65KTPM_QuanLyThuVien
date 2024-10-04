@@ -62,19 +62,38 @@ def add_book(root, Root):
     labels_left = ['Mã sách', 'Tên sách', 'Thể loại', 'Tác giả']
     entries_left = []
 
+    for i, label_text in enumerate(labels_left):
+        label = Label(root, text=label_text, font=('Arial', 14), bg='white')
+        label.place(x=80, y=200 + i * 76)
+        
+        entry = Entry(root, width=20, font=('Arial', 14), fg='black', border = 0, bg = '#d1e6fa')
+        entry.place(x=180, y=202 + i * 76)
+        
+        apply_placeholder(entry, f'Nhập {label_text.lower()}')
+        entries_left.append(entry)
+
     # Các label cho thông tin sách bên phải
     labels_right = ['Nhà xuất bản', 'Ngày sản xuất', 'Số lượng', 'Giá']
     entries_right = []
 
-    # Nút Thêm sách và Hủy
+    for i, label_text in enumerate(labels_right):
+        label = Label(root, text=label_text, font=('Arial', 14), bg='white')
+        label.place(x=470, y=200 + i * 76)
+        
+        entry = Entry(root, width=20, font=('Arial', 14), fg='black', border = 0, bg = '#d1e6fa' )
+        entry.place(x=610, y=202 + i * 76)
+        
+        apply_placeholder(entry, f'Nhập {label_text.lower()}')
+        entries_right.append(entry)
 
+    # Nút Thêm sách và Hủy
     ig_Button_ThemSach = Xuly_Anh(PathOfFile + "/Image/" +'button_Save.png', 57, 57)
-    button_Save = Button(root, image = ig_Button_ThemSach, borderwidth=0, highlightthickness=0); 
-    button_Save.place(x = 552, y = 485)
+    button_Save = Button(root, image=ig_Button_ThemSach, borderwidth=0, highlightthickness=0); 
+    button_Save.place(x=552, y=485)
 
     ig_Button_QuayLai = Xuly_Anh(PathOfFile + "/Image/" +'button_Back.png', 57, 57)
-    button_Back = Button(root, image = ig_Button_QuayLai, borderwidth=0, highlightthickness=0, command = lambda : khosach()); 
-    button_Back.place(x = 443, y = 487)
+    button_Back = Button(root, image=ig_Button_QuayLai, borderwidth=0, highlightthickness=0, command=lambda: khosach()); 
+    button_Back.place(x=443, y=487)
 
     root.update_idletasks()
     root.mainloop()
