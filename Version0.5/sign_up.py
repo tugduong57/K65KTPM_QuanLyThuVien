@@ -43,7 +43,7 @@ def sign_up(root):
             messagebox.showerror("Error", "Passwords do not match!")
             return
 
-        with open(PathOfFile + '/bg_icon/users.txt', 'a') as file:
+        with open(PathOfFile + '/Image/users.txt', 'a') as file:
             file.write(f'{username},{password_input}\n')
 
         messagebox.showinfo("Sign Up", "Account created successfully!")

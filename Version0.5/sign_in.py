@@ -47,7 +47,7 @@ def sign_in(root):
         password_input = password.get()
 
         # Đọc database
-        with open(PathOfFile + '/bg_icon/users.txt', 'r') as file:
+        with open(PathOfFile + '/Image/users.txt', 'r') as file:
             users = file.readlines()
             for line in users:
                 stored_user, stored_password = line.strip().split(',')

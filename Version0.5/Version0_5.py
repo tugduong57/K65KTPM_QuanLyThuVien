@@ -3,6 +3,7 @@ from tkinter import *
 from PIL import Image, ImageTk 
 import os
 import add_book
+import edit_book
 
 PathOfFile = os.path.abspath(__file__)
 PathOfFile = os.path.dirname(PathOfFile).replace("\\", "/")
@@ -64,7 +65,8 @@ def quanlykhosach(root):
         return
 
     def Edit_book(root, Root):
-        pass
+        edit_book.edit_book(root, Root);
+        return
     
     def sua_sach(root):
         frame_edit = Frame(root)
@@ -148,12 +150,6 @@ def quanlykhosach(root):
         for b in Books[:10000]:
             listOfID.append(b[0])
             listOfBook.append(b[1])
-    elif Timkiem_[0] != "" and Timkiem_[1] != "":
-        if Timkiem_[0] == "Mã sách":
-            for b in Books[:10000]:
-                if b[0] == Timkiem_[1]:
-                    listOfID.append(b[0])
-                    listOfBook.append(b[1])
 
     listLabelOfBook = []; listLabelOfID = []
     listPlaceOfID = [[320, 32],[345,78], [365,124], [379, 169], [387,215], [391, 260], [389, 305], [383,352], [373,397], [358,442]]
