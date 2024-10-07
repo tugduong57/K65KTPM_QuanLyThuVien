@@ -1,16 +1,26 @@
 from tkinter import *
 from tkinter import messagebox
-import Version0_5, sign_up, connectSQL
-from PIL import Image, ImageTk 
-from placeholder import apply_placeholder
 import os
-PathOfFile = os.path.abspath(__file__)
-PathOfFile = os.path.dirname(PathOfFile).replace("\\", "/")
+import Version0_5
+from PIL import Image, ImageTk 
+import sign_up
 
 def sign_in(root):
 
+    def mouse_index(event):
+        x, y = event.x, event.y
+        print(f"Vị trí chuột: x={x}, y={y}")
+    root.bind("<Button-1>", mouse_index)
+
     def on_label_click(event):
         event.widget.focus_set()
+        print("Label was clicked!")
+
+    def show_frame(frame):
+        frame.tkraise()
+
+    PathOfFile = os.path.abspath(__file__)
+    PathOfFile = os.path.dirname(PathOfFile).replace("\\", "/")
 
     window_width = 1050; window_height = 570
 
@@ -23,7 +33,8 @@ def sign_in(root):
     # Tạo frame đăng nhập
     frame_sign_in = Frame(root)
     frame_sign_in.grid(row=0, column=0, sticky="nsew")
-    frame_sign_in.tkraise()
+
+    show_frame(frame_sign_in)
 
     # Thêm hình nền
     img_bgLogIn = Xuly_Anh(PathOfFile + "/Image/" + 'bgLogIn.png', window_width, window_height)
@@ -34,16 +45,40 @@ def sign_in(root):
     def login_user():
         username = user.get()
         password_input = password.get()
-        
-        check = connectSQL.check_sign_in(username, password_input)
-        if check : 
-            Version0_5.quanlykhosach(root)
-            return
-        messagebox.showerror("Error", "Invalid username or password")
+
+        # Đọc database
+        with open(PathOfFile + '/Image/users.txt', 'r') as file:
+            users = file.readlines()
+            for line in users:
+                stored_user, stored_password = line.strip().split(',')
+                print(f"User: {stored_user}, Password: {stored_password}")
+                if stored_user == username and stored_password == password_input:
+                    print("Login successful")
+                    Version0_5.quanlykhosach(root)
+                    return
+            messagebox.showerror("Error", "Invalid username or password")
 
     def signup_user():
         sign_up.sign_up(root);
         return
+
+    ## Các hàm để tạo Dòng chữ mờ tại Entry  - placeholder
+    def set_placeholder(entry, placeholder_text):
+        entry.insert(0, placeholder_text); entry.config(fg='grey')
+
+    def on_entry_click(event, entry, placeholder_text):
+        if entry.get() == placeholder_text:
+            entry.delete(0, "end"); entry.config(fg='#145da0')
+
+    def on_focusout(event, entry, placeholder_text):
+        if entry.get() == "":
+            entry.insert(0, placeholder_text); entry.config(fg='grey')
+
+    def apply_placeholder(entry, placeholder_text):
+        # Áp dụng placeholder cho một Entry.
+        set_placeholder(entry, placeholder_text) 
+        entry.bind("<FocusIn>", lambda event: on_entry_click(event, entry, placeholder_text))
+        entry.bind("<FocusOut>", lambda event: on_focusout(event, entry, placeholder_text))
 
     # Nhập tên người dùng
     user = Entry(frame_sign_in, justify='center', width=19, bg = 'white', fg = '#145da0', font =("Poppins", 17), border=0)
@@ -66,11 +101,13 @@ def sign_in(root):
 
     # Nút đăng nhập
     login = Button(frame_sign_in, text='Đăng nhập', width=15, bg = '#145da0', fg = 'white', 
-                    font =("Poppins", 15), border=0, command=lambda: login_user()); login.place(x=420, y=315)
+                    font =("Poppins", 15), border=0, command=lambda: login_user())
+    login.place(x=420, y=315)
 
     # Nút đăng kí
     signup = Button(frame_sign_in, text='Đăng ký', width=15, bg = '#145da0', fg = 'white', 
-                    font =("Poppins", 15), border=0, command=lambda: signup_user()); signup.place(x=420, y=366)
+                    font =("Poppins", 15), border=0, command=lambda: signup_user())
+    signup.place(x=420, y=366)
 
     for B in [login, signup]:
         B.bind("<Enter>", on_enter)
