@@ -29,16 +29,6 @@ def quanlykhosach(root):
     bg_Root = Label(Root, image = bgKhoSach, borderwidth=0, highlightthickness=0); bg_Root.place(x = 0, y = 0)
     bg_Root.bind("<Button-1>", on_label_click)
 
-    def Add_book(root, Root):
-        add_book.add_book(root, Root);
-        return
-
-    def Edit_book(root, Root):
-        bookOfID = entry_ID.get()
-        book = connectSQL.find_sach("Mã sách", bookOfID)
-        edit_book.edit_book(root, Root, book);
-        return
-
     Books = connectSQL.show_sach()
 
     global Timkiem_; Timkiem_ = ["",""]
@@ -91,6 +81,15 @@ def quanlykhosach(root):
     # Tính năng cuộn
     global scroll_index; scroll_index = 0  # Để lưu chỉ số của sách hiện tại
 
+    def update_labels():
+        for i in range(min(10,len(listOfID))):
+            if scroll_index + i < len(listOfID):
+                listLabelOfID[i].config(text=listOfID[scroll_index + i])
+                listLabelOfBook[i].config(text=listOfBook[scroll_index + i])
+            else:
+                listLabelOfID[i].config(text="")
+                listLabelOfBook[i].config(text="")
+
     def mouse_scroll(event):
         global scroll_index; global listOfID;
         if event.delta > 0:     # Cuộn lên
@@ -100,15 +99,6 @@ def quanlykhosach(root):
 
         if scroll_index >= 0:   # Cập nhật nội dung của các label
             update_labels()
-
-    def update_labels():
-        for i in range(min(10,len(listOfID))):
-            if scroll_index + i < len(listOfID):
-                listLabelOfID[i].config(text=listOfID[scroll_index + i])
-                listLabelOfBook[i].config(text=listOfBook[scroll_index + i])
-            else:
-                listLabelOfID[i].config(text="")
-                listLabelOfBook[i].config(text="")
 
     def enter_on_Timkiem(event):
         Timkiem_text = entry_Timkiem.get()
@@ -152,14 +142,29 @@ def quanlykhosach(root):
 
     buttonBaoCao = Button(Root, text = "Báo cáo", bg = '#145da0', fg = "white", font =("Poppins", 20), borderwidth=0, highlightthickness=0); buttonBaoCao.place(x=95, y=427, height = 30)
 
+    def Add_book(root, Root):
+        add_book.add_book(root, Root);
+        return
+
     ig_Them = Xuly_Anh(PathOfFile + "/Image/"+'buttonThem.png', 66, 66)
     buttonThem = Button(Root, image=ig_Them, command = lambda : Add_book(Root, root), borderwidth=0, highlightthickness=0); buttonThem.place(x=425, y=490)
+
+    def Edit_book(root, Root):
+        bookOfID = entry_ID.get()
+        book = connectSQL.find_sach("Mã sách", bookOfID)
+        if len(book) == 0:
+            return
+        edit_book.edit_book(root, Root, book);
+        return
 
     ig_Sua = Xuly_Anh(PathOfFile + "/Image/"+'buttonSua.png', 66, 66)
     buttonSua = Button(Root, image=ig_Sua, command = lambda : Edit_book(Root, root), borderwidth=0, highlightthickness=0); buttonSua.place(x=530, y=490)
 
     def Del_book(root):
         bookOfID = entry_ID.get()
+        book = connectSQL.find_sach("Mã sách", bookOfID)
+        if len(book) == 0:
+            return
         del_book.del_book(root,bookOfID)
         return
 

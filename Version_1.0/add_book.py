@@ -11,6 +11,13 @@ PathOfFile = os.path.dirname(PathOfFile).replace("\\", "/")
 
 def add_book(root, Root):
 
+    def on_enter(event):
+        event.widget.config(cursor='hand2')  # Thay đổi màu nền và kiểu con trỏ khi chuột vào label
+
+    def on_leave(event):
+        event.widget.config(cursor='')  # Khôi phục màu nền và kiểu con trỏ khi chuột ra khỏi label
+
+
     def show_frame(frame):
         frame.tkraise()
 
@@ -75,6 +82,10 @@ def add_book(root, Root):
     ig_Button_QuayLai = Xuly_Anh(PathOfFile + "/Image/" +'button_Back.png', 57, 57)
     button_Back = Button(root, image = ig_Button_QuayLai, borderwidth=0, highlightthickness=0, command = lambda : khosach()); 
     button_Back.place(x = 443, y = 487)
+
+    for N in [button_Save, button_Back]:
+        N.bind("<Enter>", on_enter)
+        N.bind("<Leave>", on_leave)
 
 
 

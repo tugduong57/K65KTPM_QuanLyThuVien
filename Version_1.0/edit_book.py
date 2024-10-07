@@ -9,6 +9,14 @@ PathOfFile = os.path.abspath(__file__)
 PathOfFile = os.path.dirname(PathOfFile).replace("\\", "/")
 
 def edit_book(root, Root, book):
+
+    def on_enter(event):
+        event.widget.config(cursor='hand2')  # Thay đổi màu nền và kiểu con trỏ khi chuột vào label
+
+    def on_leave(event):
+        event.widget.config(cursor='')  # Khôi phục màu nền và kiểu con trỏ khi chuột ra khỏi label
+
+
     print(12, book)
     def show_frame(frame):
         frame.tkraise()
@@ -63,7 +71,7 @@ def edit_book(root, Root, book):
         entry.insert(0, book[0][4+i])  # Chèn dữ liệu đã có vào Entry
         entries_right.append(entry)    
 
-    def sua_sach() :
+    def sua_sach():
         connectSQL.update_sach(entries_left[0].get(), entries_left[1].get(), entries_left[2].get(), entries_left[3].get(), entries_right[0].get(), entries_right[1].get(), entries_right[2].get(), entries_right[3].get())
         Version0_5.quanlykhosach(root)
     
@@ -76,6 +84,11 @@ def edit_book(root, Root, book):
     ig_Button_Back = Xuly_Anh(PathOfFile + "/Image/" +'button_Back.png', 57, 57)
     button_Back = Button(root, image = ig_Button_Back, borderwidth=0, highlightthickness=0, command = lambda : khosach()); 
     button_Back.place(x = 443, y = 487)
+
+    for N in [button_Save, button_Back]:
+        N.bind("<Enter>", on_enter)
+        N.bind("<Leave>", on_leave)
+
 
     root.update_idletasks()
     root.mainloop()

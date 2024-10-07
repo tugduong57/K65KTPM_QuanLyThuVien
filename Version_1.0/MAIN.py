@@ -28,8 +28,8 @@ root.resizable(False, False)
 root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(0, weight=1)
 
-#sign_in.sign_in(root)
+sign_in.sign_in(root)
 #sign_up.sign_up(root)
-Version0_5.quanlykhosach(root)
+#Version0_5.quanlykhosach(root)
 
 root.mainloop()
