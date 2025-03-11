@@ -1,0 +1,38 @@
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\bin\Debug\ThietKeGiaoDien.exe.config
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\bin\Debug\ThietKeGiaoDien.exe
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\bin\Debug\ThietKeGiaoDien.pdb
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.csproj.AssemblyReference.cache
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.Form1.resources
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.Properties.Resources.resources
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.csproj.GenerateResource.cache
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.csproj.CoreCompileInputs.cache
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.exe
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.pdb
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormDoiTac.resources
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormHoaDon.resources
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormBangGia.resources
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormHangHoa.resources
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormThongKe.resources
+C:\Users\tugdu\OneDrive\Desktop\Quản lí Đại lí\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormTaiKhoan.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\bin\Debug\ThietKeGiaoDien.exe.config
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\bin\Debug\ThietKeGiaoDien.exe
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.csproj.AssemblyReference.cache
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.Form1.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormBangGia.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormDoiTac.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormHangHoa.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormHoaDon.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormTaiKhoan.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormThongKe.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.Properties.Resources.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.csproj.GenerateResource.cache
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.csproj.CoreCompileInputs.cache
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.exe
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.pdb
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\bin\Debug\ThietKeGiaoDien.pdb
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormHoaDonNhap.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormHoaDonXuat.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormDoiTac_KH.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormDoiTac_NCC.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormHoaDonLichSu.resources
+D:\project\Winform-PhanMemQuanLi\ThietKeGiaoDien\obj\Debug\ThietKeGiaoDien.FormChiTietHoaDon.resources
