@@ -31,3 +31,17 @@
    ```sh
    python main.py
    ```
+
+## **Cấu Trúc Thư Mục**
+```
+Library-Management/
+│-- models/           # Xử lý thao tác với cơ sở dữ liệu
+│-- views/            # Chứa các thành phần giao diện Tkinter
+│-- controllers/      # Điều khiển luồng dữ liệu
+│-- main.py           # Điểm khởi chạy của ứng dụng
+│-- README.md         # Tài liệu hướng dẫn
+```
+
+## **Đóng Góp**
+📌 Mọi đóng góp đều được hoan nghênh! Bạn có thể **fork** kho lưu trữ và gửi **pull request**.
+
