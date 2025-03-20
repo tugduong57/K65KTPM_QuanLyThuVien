@@ -7,9 +7,9 @@
 - 🔹 **Giao diện thân thiện**: Phát triển bằng Tkinter, dễ sử dụng và trực quan.
 - 🔹 **Quản lý cơ sở dữ liệu**: Sử dụng SQL Server để lưu trữ và truy xuất dữ liệu hiệu quả.
 - 🔹 **Mô hình MVC**: Tách biệt giữa **Mô hình (Model)**, **Giao diện (View)** và **Điều khiển (Controller)** giúp tổ chức mã nguồn tốt hơn.
-- 🔹 **Quản lý sách**: Thêm, cập nhật, xóa và tìm kiếm sách trong thư viện.
-- 🔹 **Quản lý người dùng**: Theo dõi thành viên thư viện và trạng thái mượn sách.
-- 🔹 **Quản lý giao dịch**: Ghi nhận lịch sử mượn và trả sách.
+- 🔹 **Quản lý sách**: (chưa phát triển) Thêm, cập nhật, xóa và tìm kiếm sách trong thư viện.
+- 🔹 **Quản lý độc giả**: (chưa phát triển) Theo dõi thành viên thư viện và trạng thái mượn sách.
+- 🔹 **Quản lý mượn trả**: (chưa phát triển) Ghi nhận lịch sử mượn và trả sách.
 
 ## Công Nghệ Sử Dụng
 - ✅ **Python** *(Ngôn ngữ lập trình chính)*
@@ -26,7 +26,11 @@
    ```sh
    pip install pyodbc
    ```
-3. **Cấu hình kết nối cơ sở dữ liệu** trong tập tin cấu hình của ứng dụng.
+3. **Cấu hình kết nối cơ sở dữ liệu**
+   ```sh
+   Trong file models/connectSQL.py
+   ```
+   
 4. **Chạy phần mềm:**
    ```sh
    python main.py
